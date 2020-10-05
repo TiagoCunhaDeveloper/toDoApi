@@ -85,8 +85,20 @@ Backend de um projeto simples de to do.
 $ npm install
 ```
 
+## Env
+Variaveis de ambiente
+```yaml
+dev:
+  port: 3000
+  startItems: true
+prod:
+  port: 3333
+  startItems: false
+```
+
+
 ## Execução
-Para executar o projeto use:(Projeto rodando na porta http://localhost:3000)
+Para executar o projeto use:(Projeto rodando na porta)
 
 
 ```bash
@@ -94,9 +106,11 @@ Para executar o projeto use:(Projeto rodando na porta http://localhost:3000)
 $ npm run start
 
 # watch mode
+# http://localhost:3000
 $ npm run start:dev
 
 # production mode
+# http://localhost:3333
 $ npm run start:prod
 ```
 

@@ -27,14 +27,14 @@ describe('TasksController', () => {
   });
 
   it('POST - Criar', async () => {
-    return request(app.getHttpServer())
-      .post('/tasks').set({description: "Tarefa Teste",completed: true})
+    return await request(app.getHttpServer())
+      .post('/tasks').send({description: "Tarefa Teste",completed: true,cep:84025530})
       .expect(201);
   });
 
   it('PUT - Atualizar', async () => {
-    return request(app.getHttpServer())
-      .put('/tasks/1').set({description: "Tarefa Teste 2",completed: true}).expect(200);
+    return await request(app.getHttpServer())
+      .put('/tasks/1').send({description: "Tarefa Teste 2",completed: true,cep:84025530}).expect(200);
   });
 
   it('DELETE - Deletar', async () => {
